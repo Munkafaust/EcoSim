@@ -1,0 +1,10 @@
+C:\Users\Terrence\AppData\Local\Temporary Projects\LearningSpace\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Terrence\AppData\Local\Temporary Projects\LearningSpace\bin\Debug\LearningSpace.exe
+C:\Users\Terrence\AppData\Local\Temporary Projects\LearningSpace\bin\Debug\LearningSpace.pdb
+C:\Users\Terrence\AppData\Local\Temporary Projects\LearningSpace\obj\x86\Debug\LearningSpace.exe
+C:\Users\Terrence\AppData\Local\Temporary Projects\LearningSpace\obj\x86\Debug\LearningSpace.pdb
+C:\Users\Terrence\Desktop\Programming\MapGen\EcoSim\LearningSpace\LearningSpace\obj\x86\Debug\LearningSpace.exe
+C:\Users\Terrence\Desktop\Programming\MapGen\EcoSim\LearningSpace\LearningSpace\obj\x86\Debug\LearningSpace.pdb
+C:\Users\Terrence\Desktop\Programming\MapGen\EcoSim\LearningSpace\LearningSpace\bin\Debug\LearningSpace.exe
+C:\Users\Terrence\Desktop\Programming\MapGen\EcoSim\LearningSpace\LearningSpace\bin\Debug\LearningSpace.pdb
+C:\Users\Terrence\Desktop\Programming\MapGen\EcoSim\LearningSpace\LearningSpace\obj\x86\Debug\ResolveAssemblyReference.cache
