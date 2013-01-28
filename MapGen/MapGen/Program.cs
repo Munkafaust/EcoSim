@@ -8,36 +8,28 @@ namespace ConsoleApplication1
     class Program
     {
        
-        
         static void Main(string[] args)
         {
-            
-
+        
             int[] regions = new int[7];
+            Random random = new Random();
 
             for (int i = 0; i < regions.Length; i++)
             {
-                Random random = new Random();
-                System.Threading.Thread.Sleep(50);
-                regions[i] = random.Next(1, 22);
-                //Console.WriteLine(regions[i]);
+                regions[i] = biomeGen(1,22, random);
             }
-
 
             for (int i = 0; i < regions.Length; i++)
             {
                 Console.WriteLine(regions[i]);
-
             }
 
             Console.ReadLine();
-
         }
 
-        public static int biomeGen(int min, int max)
+        public static int biomeGen(int min, int max, Random bg)
         {
-            Random random = new Random();
-            return random.Next(min, max);
+            return bg.Next(min, max);
         }
         
     }
