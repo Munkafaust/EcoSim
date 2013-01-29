@@ -9,8 +9,44 @@ namespace LearningSpace
     {
         static void Main(string[] args)
         {
-            List<Biome> availableBiomes = new List<Biome>()
+            //Biome list initilization
+            List<Biome> availableBiomes = Biome.setBiomes();
+            //
+
+            //Creating game Tiles
+            List<Tile> randomSeven = new List<Tile>();
+            Random random = new Random();
+            for (int i = 0; i < 7; i++)
             {
+                int randomID = getRandom(1, 22, random);
+                randomSeven.Add(new Tile { Biome = availableBiomes.Single(x => x.ID == randomID), Location = i });
+            }
+            //
+
+            //Printing Tile information
+            foreach (var tile in randomSeven)
+            {
+                Console.WriteLine("{0} - {1} - {2} ({3})", tile.Location, tile.Biome.Category, tile.Biome.Name, tile.Biome.ID);
+            }
+            Console.ReadLine();
+            //
+
+        }
+
+        public static int getRandom(int min, int max, Random random)
+        {
+            return random.Next(min, max);
+        }
+
+        class Biome
+        {
+            public string Category { get; set; }
+            public string Name { get; set; }
+            public int ID { get; set; }
+            public static List<Biome> setBiomes()
+            {
+                List<Biome> availableBiomes = new List<Biome>()
+                {
                 new Biome { Category = "Aquatic", Name = "Coral Reef", ID = 1 },
                 new Biome { Category = "Aquatic", Name = "Fresh Water", ID = 2 },
                 new Biome { Category = "Aquatic", Name = "Marine", ID = 3 },
@@ -33,34 +69,9 @@ namespace LearningSpace
                 new Biome { Category = "Grassland", Name = "Steppes", ID = 20 },
                 new Biome { Category = "Tundra", Name = "Alpine", ID = 21 },
                 new Biome { Category = "Tundra", Name = "Arctic", ID = 22 }
-            };
-
-            List<Tile> randomSeven = new List<Tile>();
-            Random random = new Random();
-            for (int i = 0; i < 7; i++)
-            {
-                int randomID = getRandom(1, 22, random);
-                randomSeven.Add(new Tile { Biome = availableBiomes.Single(x => x.ID == randomID), Location = i });
+                };
+            return availableBiomes;
             }
-
-            foreach (var tile in randomSeven)
-            {
-                Console.WriteLine("{0} - {1} - {2}", tile.Location, tile.Biome.Category, tile.Biome.Name);
-            }
-
-            Console.ReadLine();
-        }
-
-        public static int getRandom(int min, int max, Random random)
-        {
-            return random.Next(min, max);
-        }
-
-        class Biome
-        {
-            public string Category { get; set; }
-            public string Name { get; set; }
-            public int ID { get; set; }
         }
 
         class Tile
